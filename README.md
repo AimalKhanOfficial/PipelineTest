@@ -5,6 +5,10 @@ This repo is to test the jenkins CD Pipelines. Consider the following steps:
 * Switch to the Pipeline tab, and for the 'Definition' field, select 'Pipeline Script from SCM', add a github repo url and its credentials
 * Save these changes and click on the 'Build Now' option
 
+Problems with sh? Try these out:
+* https://stackoverflow.com/questions/30374998/run-a-command-shell-in-jenkins
+* https://stackoverflow.com/questions/45140614/jenkins-pipeline-sh-fail-with-cannot-run-program-nohup-on-windows
+
 How do i trigger a build?
 Tried to trigger a build with each PR creation through a Git hook but i don't have a public IP for jenkins (listening on localhost for now) so this experiement kind of failed. Anyway, here are the steps:
 * Navigate to Jenkins HomePage and click on Manage Jenkins > Manage Plugins > Available (2nd Tab) > Search for 'GitHub Pull Request Builder' and install it
