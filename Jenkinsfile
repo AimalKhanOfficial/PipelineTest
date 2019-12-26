@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'About to install packages'
-                sh 'npm install'
+                echo 'About to build a docker image'
+                sh 'docker build -t reactapp .'
             }
         }
     }
