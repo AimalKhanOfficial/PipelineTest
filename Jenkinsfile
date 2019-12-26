@@ -1,20 +1,17 @@
 pipeline {
-    agent any
+
+    //Agent -> Docker with Node (latest) as its base image 
+    agent {
+        docker {
+            image: 'node'
+        }
+    }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'About to install packages'
+                sh 'npm install'
             }
         }
     }
