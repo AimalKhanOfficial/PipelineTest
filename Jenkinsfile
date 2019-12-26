@@ -1,12 +1,4 @@
-pipeline {
-
-    //Agent -> Docker with Node (latest) as its base image 
-    //agent {
-        //dockerfile true
-    //}
-
-    agent any
-
+node {
     stages {
         stage('Build') {
             steps {
