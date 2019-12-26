@@ -2,9 +2,7 @@ pipeline {
 
     //Agent -> Docker with Node (latest) as its base image 
     agent {
-        docker {
-            image 'node'
-        }
+        dockerfile true
     }
 
     stages {
